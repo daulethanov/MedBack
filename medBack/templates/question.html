@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/ques.css' %}">
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="width">
+		<div class="question">
+			<a href="#" class="item">
+				<div>
+					<img src="img/врач.jpg" alt="">
+				</div>
+				<div class="question__txt__content">
+					<span class="question__item__txt question__item__txt-1">Руслан Загидулин</span>
+					<span class="question__item__txt question__item__txt-2">Специализация врача</span>
+				</div>
+			</a>
+			<div class="input">
+				<form action="" method="post">
+					{% csrf_token %}
+						{{form}}
+					<button>Отправить</button>
+<!--				<button>like</button>-->
+				</form>
+			</div>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive navbar using only html css</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home2.css' %}">
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="modul">
+		<div class="modul__position">
+			<div class="model__position__content" >
+				<div class="close__position">
+					<div class="close">
+						<span class="close__line close__line-1"></span>
+						<span class="close__line close__line-2"></span>
+					</div>
+				</div>
+				<div class="content__vhod">
+					<h1>Авторизация</h1>
+					<div class="content__vhod__item">
+						<form action="" method="post">
+							{% csrf_token %}
+							{{form}}
+						<input type="email" placeholder="Логин">
+						<input type="password" placeholder="Пароль" id="content__vhod__item__input">
+						<a href="#">Забыл пароль</a>
+						<button>Войти</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="header__content">
+			<a href="index.html" class="logo"><i class="ri-home-heart-fill"></i><span>MedTech</span></a>
+
+			<ul class="navbar">
+				<li><a href="#" class="active">Главная</a></li>
+				<li><a href="#">О нас</a></li>
+				<select name="" id="select__land">
+					<option value="">Выберите город</option>
+					<option value="">Актау</option>
+					<option value="">Актобе</option>
+					<option value="">Актюбинск</option>
+					<option value="">Алмата</option>
+					<option value="">Аркалык</option>
+					<option value="">Атбасар</option>
+					<option value="">Атырау</option>
+					<option value="">Балхаш</option>
+					<option value="">Боровое</option>
+					<option value="">Джамбул</option>
+					<option value="">Жезказган</option>
+					<option value="">Зайсан</option>
+					<option value="">Караганда</option>
+					<option value="">Кокшетау</option>
+					<option value="">Костанай</option>
+					<option value="">Кызылорда</option>
+					<option value="">Нур-Султан</option>
+					<option value="">Орал</option>
+					<option value="">Павлодар</option>
+					<option value="">Петропавловск</option>
+					<option value="">Риддер</option>
+					<option value="">Сарыагаш</option>
+					<option value="">Семипалатинск</option>
+					<option value="">Талды-Корган</option>
+					<option value="">Талды-Курган</option>
+					<option value="">Усть-Каменогорск</option>
+					<option value="">Шимкент</option>
+					<option value="">Экибастуз</option>
+				</select>
+			</ul>
+			<div class="main">
+				<a href="{% url 'register' %}">Регистрация</a>
+				<a href="#" class="user btn__vhod"><img src="{% static 'img/vhod.svg' %}" alt=""></a>
+				<div class="menu__btn">
+					<span class="burger__span burger__span1"></span>
+					<span class="burger__span burger__span2"></span>
+					<span class="burger__span burger__span3"></span>
+					<span class="burger__span burger__span4"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="width">
+
+		<!-- Карусель -->
+		<div class="slide">
+			<div class="slider">
+				<div class="slider__line">
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel1-white.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel2.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel3.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel4.jpg' %}" alt="">
+					</a>
+				</div>
+			</div>
+			<button class="slider__button slider-prev"> &#10094</button>
+			<button class="slider__button slider-next "> &#10095 </button>
+		</div>
+		<!-- 
+		Карусель < 1200px -->
+		<div class="slide-2">
+			<div class="slider-2">
+				<div class="slider__line-2">
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel1-white.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel2.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel3.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel4.jpg' %}" alt="">
+					</a>
+				</div>
+			</div>
+			<button class="slider__button-2 slider-prev-2"> &#10094</button>
+			<button class="slider__button-2 slider-next-2 "> &#10095 </button>
+		</div>
+
+
+		<!-- Поиск -->
+		<div class="poisck">
+			<input type="text" class="poisck__input" placeholder="Найти: клинику, лекарство, врача">
+			<input type="button" class="poisck__btn" value="Поиск">
+		</div>
+
+		<!-- Блок -->
+		<div class="blook__content">
+			<a href="#" class="blok__content__item">
+				<img src="{% static 'img/блоки/задать вопрос.svg' %}" alt="">
+				<div>Задать вопрос</div>
+			</a>
+			<a href="#" class="blok__content__item">
+				<img src="{% static 'img/блоки/навигатор.svg' %}" alt="">
+				<div>Найти клинику</div>
+			</a>
+			<a href="{% url 'shop' %}" class="blok__content__item">
+				<img src="{% static 'img/блоки/лекарства.svg' %}" alt="">
+				<div>Лекарство</div>
+			</a>
+			<a href="#" class="blok__content__item">
+				<img src="{% static 'img/блоки/запись.svg' %}" alt="">
+				<div>Запись к врачу</div>
+			</a>
+			<a href="#" class="blok__content__item">
+				<img src="{% static 'img/блоки/пожертвования.svg' %}" alt="">
+				<div>Помощь</div>
+			</a>
+			<a href="#" class="blok__content__item">
+				<img src="{% static 'img/блоки/оказание__помощи.svg' %}" alt="">
+				<div>Услуги</div>
+			</a>
+		</div>
+		<!-- картинка -->
+		<div id="foto">
+			<a href="#">
+				<img src="{% static 'img/картинка/картинка.jpg' %}" alt="">
+			</a>
+		</div>
+
+		<!-- 
+		Блок с вопросами -->
+		<h2 id="question__txt">Не болей досым</h2>
+		<h3 id="question__txt-2">Здоровье залог успеха</h3>
+		<div class="question">
+			<div class="question__content">
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/андролог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Андролог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/психолог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Психолог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/психиатр.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Психиатр</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/нейрохирург.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Нейрохирург</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/остеопат.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Остеопат</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+			</div>
+			<div class="question__content">
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/невролог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Невролог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/мануальный__терапевт.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Мануальный терапевт</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/офтамолог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Офтальмолог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/гематолог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Гематолог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/психотерапевт.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Психотерапевт</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+			</div>
+			<div class="question__content">
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/гастероэнтеролог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Гастроэнтеролог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/гепатолог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Гепатолог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/эпилептолог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Эпилептолог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/детский__невролог.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Детский невролог</span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+				<a href="#" class="question__content__item">
+					<img src="{% static 'img/вопросы/члхирург.jpg' %}" alt="">
+					<div class="question__content__item__txt">
+						<span class="question__content__item__txt-1">Челюстно-лицевой хирурги </span>
+						<span class="question__content__item__txt-2">0 врачей</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<a href="#" id="question__txt-3">Все специализации</a>
+
+		<!-- Вопросы карусель -->
+		<h2 id="question__slide__txt">Что ты хочешь узнать?</h2>
+		<div class="slide__answer__fon">
+			<div class="slide__answer">
+				<div class="slider__answer">
+					<div class="slider__line__answer">
+						<div class="slider__line__answer__item">
+							<div class="slider__line__answer__item__top">
+								<span class="slider__line__answer__item__top__txt">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt">
+										<span class="answer__user__txt-1">Эпилептолог</span>
+										<span class="answer__user__txt-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+
+							</div>
+						</div>
+						<div class="slider__line__answer__item">
+							<div class="slider__line__answer__item__top">
+								<span class="slider__line__answer__item__top__txt">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt">
+										<span class="answer__user__txt-1">Эпилептолог</span>
+										<span class="answer__user__txt-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+							</div>
+						</div>
+						<div class="slider__line__answer__item">
+							<div class="slider__line__answer__item__top">
+								<span class="slider__line__answer__item__top__txt">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt">
+										<span class="answer__user__txt-1">Эпилептолог</span>
+										<span class="answer__user__txt-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+							</div>
+						</div>
+						<div class="slider__line__answer__item">
+							<div class="slider__line__answer__item__top">
+								<span class="slider__line__answer__item__top__txt">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt">
+										<span class="answer__user__txt-1">Эпилептолог</span>
+										<span class="answer__user__txt-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="slider__button__answer slider-prev__answer"> &#10094</button>
+				<button class="slider__button__answer slider-next__answer "> &#10095 </button>
+			</div>
+		</div>
+
+		<!-- Вопросы карусель < 1200px-->
+		<div class="slide__answer__fon-2">
+			<div class="slide__answer-2">
+				<div class="slider__answer-2">
+					<div class="slider__line__answer-2">
+						<div class="slider__line__answer__item-2">
+							<div class="slider__line__answer__item__top-2">
+								<span class="slider__line__answer__item__top__txt-2">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom-2">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt-2">
+										<span class="answer__user__txt-1-2">Эпилептолог</span>
+										<span class="answer__user__txt-2-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt-2">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+
+							</div>
+						</div>
+						<div class="slider__line__answer__item-2">
+							<div class="slider__line__answer__item__top-2">
+								<span class="slider__line__answer__item__top__txt-2">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom-2">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt-2">
+										<span class="answer__user__txt-1-2">Эпилептолог</span>
+										<span class="answer__user__txt-2-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt-2">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+
+							</div>
+						</div>
+						<div class="slider__line__answer__item-2">
+							<div class="slider__line__answer__item__top-2">
+								<span class="slider__line__answer__item__top__txt-2">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom-2">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt-2">
+										<span class="answer__user__txt-1-2">Эпилептолог</span>
+										<span class="answer__user__txt-2-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt-2">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+
+							</div>
+						</div>
+						<div class="slider__line__answer__item-2">
+							<div class="slider__line__answer__item__top-2">
+								<span class="slider__line__answer__item__top__txt-2">Звук при кашле и смехе очень
+									сильный, похоже как будто демон внутри</span>
+							</div>
+							<div class="slider__line__answer__item__bootom-2">
+								<a href="#" class="answer__user">
+									<img src="{% static 'img/карусель ответ/врач.jpg' %}" alt="">
+									<div class="answer__user__txt-2">
+										<span class="answer__user__txt-1-2">Эпилептолог</span>
+										<span class="answer__user__txt-2-2">0 врачей</span>
+									</div>
+								</a>
+								<div class="slider__line__answer__item__bootom__txt-2">
+									Добрый день. Конечно осень интересно что же за демон внутри Вас)))
+									Но чтобы избежать какого либо заболевания я бы порекомендовал обратиться для начала
+									к ЛОР врачу и сделать ФГДС.
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="slider__button__answer-2 slider-prev__answer-2"> &#10094</button>
+				<button class="slider__button__answer-2 slider-next__answer-2 "> &#10095 </button>
+			</div>
+		</div>
+		<div class="question__slide__btn">
+			<button class="question__slide__btn__item">Задать вопрос</button>
+		</div>
+
+		<!-- Статьи -->
+		<div id="article">Статьи</div>
+		<div class="article">
+			<a href="#" class="article__content">
+				<img src="{% static 'img/статья/грыжа.jpg' %}" alt="">
+				<p class="article__content__txt-1">Статьи</p>
+				<p class="article__content__txt-2">Безоперационное лечение грыжи</p>
+				<hr id="article__content__hr">
+				<p class="article__content__txt-3">00.00.0000</p>
+			</a>
+			<a href="#" class="article__content">
+				<img src="{% static 'img/статья/бесплодие.jpg' %}" alt="">
+				<p class="article__content__txt-1">Статьи</p>
+				<p class="article__content__txt-2">«Порой одно слово может изменить все!»: репродуктолог о бесплодии</p>
+				<hr id="article__content__hr">
+				<p class="article__content__txt-3">00.00.0000</p>
+			</a>
+			<a href="#" class="article__content">
+				<img src="{% static 'img/статья/рак.jpg' %}" alt="">
+				<p class="article__content__txt-1">Статьи</p>
+				<p class="article__content__txt-2">Как застраховаться от рака</p>
+				<hr id="article__content__hr">
+				<p class="article__content__txt-3">00.00.0000</p>
+			</a>
+		</div>
+		<a href="#" id="article__all">Все статьи</a>
+		<!--js link--->
+	</div>
+	<footer>
+		<div class="footer__content">
+			<div class="footer__content__item">
+				<p>Пациенту</p>
+				<a href="#">Врачи</a>
+				<a href="#">Медцентры</a>
+				<a href="#">Услуги</a>
+				<a href="#">Специализации</a>
+				<a href="#">Типы медцентров</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Информация</p>
+				<a href="#">Задать вопрос врачу</a>
+				<a href="#">Cправочник заболеваний</a>
+				<a href="#">Лечение заболеваний</a>
+				<a href="#">Статьи</a>
+			</div>
+			<div class="footer__content__item">
+				<p>О нас</p>
+				<a href="#">О проекте</a>
+				<a href="#">Сотрудничество</a>
+				<a href="#">Контакты</a>
+				<a href="#">Правовая информация</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Мы в социальных сетях</p>
+				<div class="footer__content__item__sety">
+					<a href="#" class="footer__sety">
+						<img src="{% static 'img/подвал/инста.svg' %}" alt="">
+					</a>
+					<a href="https://t.me/MedTech_krg_bot" class="footer__sety">
+						<img src="{% static 'img/подвал/телеграм.svg' %}" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="{% static 'js/javascript.js' %}"></script>
+
+</body>
+
+</html>

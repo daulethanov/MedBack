@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__content">
+			<a href="{% url 'home' %}" class="logo"><i class="ri-home-heart-fill"></i><span>MedTech</span></a>
+
+			<ul class="navbar">
+				<li><a href="{% url 'home' %}">Главная</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#" class="active">Регистрация</a></li>
+				<!-- <select name="" id="select__land">
+					<option value="">Выберите город</option>
+					<option value="">Актау</option>
+					<option value="">Актобе</option>
+					<option value="">Актюбинск</option>
+					<option value="">Алмата</option>
+					<option value="">Аркалык</option>
+					<option value="">Атбасар</option>
+					<option value="">Атырау</option>
+					<option value="">Балхаш</option>
+					<option value="">Боровое</option>
+					<option value="">Джамбул</option>
+					<option value="">Жезказган</option>
+					<option value="">Зайсан</option>
+					<option value="">Караганда</option>
+					<option value="">Кокшетау</option>
+					<option value="">Костанай</option>
+					<option value="">Кызылорда</option>
+					<option value="">Нур-Султан</option>
+					<option value="">Орал</option>
+					<option value="">Павлодар</option>
+					<option value="">Петропавловск</option>
+					<option value="">Риддер</option>
+					<option value="">Сарыагаш</option>
+					<option value="">Семипалатинск</option>
+					<option value="">Талды-Корган</option>
+					<option value="">Талды-Курган</option>
+					<option value="">Усть-Каменогорск</option>
+					<option value="">Шимкент</option>
+					<option value="">Экибастуз</option>
+				</select> -->
+			</ul>
+			<div class="main">
+				<a href="{% url 'home' %}" class="user"><img src="{% static 'img/vhod.svg' %}" alt=""></a>
+				<div class="menu__btn">
+					<span class="burger__span burger__span1"></span>
+					<span class="burger__span burger__span2"></span>
+					<span class="burger__span burger__span3"></span>
+					<span class="burger__span burger__span4"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="width">
+		<div class="content">
+			<div class="content__registr">
+				<h1>Регистрация</h1>
+				<div class="content__registr__input">
+					<input type="radio" name="vibor" value="vrach">Врач
+					<input type="radio" name="vibor" value="polzovatel">Пользователь
+				</div>
+				<div class="content__registr__item">
+
+					<form action="" method="post">
+						{% csrf_token %}
+						{{form}}
+						<button type="submit">Вперёд</button>
+					</form>
+<!--					<input type="tel" placeholder="Номер телефона">-->
+<!--					<input type="email" placeholder="Логин">-->
+<!--					<input type="password" placeholder="Пароль">-->
+<!--					<input type="password" placeholder="Подтверждение пароля">-->
+				</div>
+			</div>
+			<div class="content__item"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer__content">
+			<div class="footer__content__item">
+				<p>Пациенту</p>
+				<a href="#">Врачи</a>
+				<a href="#">Медцентры</a>
+				<a href="#">Услуги</a>
+				<a href="#">Специализации</a>
+				<a href="#">Типы медцентров</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Информация</p>
+				<a href="#">Задать вопрос врачу</a>
+				<a href="#">Cправочник заболеваний</a>
+				<a href="#">Лечение заболеваний</a>
+				<a href="#">Статьи</a>
+			</div>
+			<div class="footer__content__item">
+				<p>О нас</p>
+				<a href="#">О проекте</a>
+				<a href="#">Сотрудничество</a>
+				<a href="#">Контакты</a>
+				<a href="#">Правовая информация</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Мы в социальных сетях</p>
+				<div class="footer__content__item__sety">
+					<a href="#" class="footer__sety">
+						<img src="{% static 'img/подвал/инста.svg' %}" alt="">
+					</a>
+					<a href="https://t.me/MedTech_krg_bot" class="footer__sety">
+						<img src="{% static 'img/подвал/телеграм.svg' %}" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

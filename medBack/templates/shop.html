@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/shop.css' %}">
+
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="modul">
+		<div class="modul__position">
+			<div class="model__position__content">
+				<div class="close__position">
+					<div class="close">
+						<span class="close__line close__line-1"></span>
+						<span class="close__line close__line-2"></span>
+					</div>
+				</div>
+				<div class="content__vhod">
+					<h1>Авторизация</h1>
+					<div class="content__vhod__item">
+						<input type="email" placeholder="Логин">
+						<input type="password" placeholder="Пароль" id="content__vhod__item__input">
+						<a href="#">Забыл пароль</a>
+						<button>Войти</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="header__content">
+			<a href="{% url 'home' %}" class="logo"><i class="ri-home-heart-fill"></i><span>MedTech</span></a>
+
+			<ul class="navbar">
+				<li><a href="{% url 'home' %}">Главная</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#" class="active">Магазин</a></li>
+			</ul>
+				<div class="main">
+				<a href="#" class="user btn__korzina"><img src="{% static 'img/korzina.svg' %}" alt=""></a>
+				<div class="menu__btn">
+					<span class="burger__span burger__span1"></span>
+					<span class="burger__span burger__span2"></span>
+					<span class="burger__span burger__span3"></span>
+					<span class="burger__span burger__span4"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="width">
+
+		<div class="slide">
+			<div class="slider">
+				<div class="slider__line">
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel4.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel2.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel3.jpg' %}" alt="">
+					</a>
+					<a href="#">
+						<img src="{% static 'img/карусель/foto__karusel4.jpg' %}" alt="">
+					</a>
+				</div>
+			</div>
+			<button class="slider__button slider-prev"> &#10094</button>
+			<button class="slider__button slider-next "> &#10095 </button>
+		</div>
+		<div class="shop">
+
+			<div class="shop__content">
+
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'vitamin.jpg' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/3.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/2.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/4.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+
+
+			</div>
+			<div class="shop__content">
+
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/5.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/7.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/8.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/9.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="shop__content">
+
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/10.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/62.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/34.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/53.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="shop__content">
+
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/62.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/22.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/55.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+				<div href="#" class="shop__content__item">
+					<a href="#">
+						<div class="shop__content__item__top">
+							<img src="{% static 'img/3.png' %}" alt="">
+						</div>
+						<div class="shop__content__item__bottom">
+							<a href="#" class="shop__content__item__bottom__txt-1">Название</a>
+							<a href="#" class="shop__content__item__bottom__txt-2">1000тг</a>
+							<button class="shop__content__item__bottom__btn">В корзину</button>
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="footer__content">
+			<div class="footer__content__item">
+				<p>Пациенту</p>
+				<a href="#">Врачи</a>
+				<a href="#">Медцентры</a>
+				<a href="#">Услуги</a>
+				<a href="#">Специализации</a>
+				<a href="#">Типы медцентров</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Информация</p>
+				<a href="#">Задать вопрос врачу</a>
+				<a href="#">Cправочник заболеваний</a>
+				<a href="#">Лечение заболеваний</a>
+				<a href="#">Статьи</a>
+			</div>
+			<div class="footer__content__item">
+				<p>О нас</p>
+				<a href="#">О проекте</a>
+				<a href="#">Сотрудничество</a>
+				<a href="#">Контакты</a>
+				<a href="#">Правовая информация</a>
+			</div>
+			<div class="footer__content__item">
+				<p>Мы в социальных сетях</p>
+				<div class="footer__content__item__sety">
+					<a href="#" class="footer__sety">
+						<img src="{% static 'img/подвал/инста.svg' %}" alt="">
+					</a>
+					<a href="#" class="footer__sety">
+						<img src="{% static 'img/подвал/телеграм.svg' %}" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
